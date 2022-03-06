@@ -8,29 +8,46 @@
     android:background="@color/background"
     tools:context=".con_temperature">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        android:background="@color/design_default_color_primary"
+        android:orientation="vertical"></androidx.appcompat.widget.Toolbar>
+
     <LinearLayout
         android:id="@+id/ll_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="40dp"
             android:text="Temperature"
+            android:padding="10dp"
+            android:textAlignment="center"
             android:textColor="@color/textColor"
             android:textSize="24sp" />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="40dp"
             android:src="@drawable/t1" />
+
+        <Button
+            android:id="@+id/speech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speech to Number"
+            android:background="@color/purple2"
+            />
 
     </LinearLayout>
 
@@ -59,7 +76,7 @@
                 android:inputType="phone"
                 android:padding="12dp"
                 android:textColor="@color/textColor"
-                android:textColorHint="@color/hintColor"
+                android:textColorHint="@color/purple1"
                 android:textCursorDrawable="@null" />
 
             <TextView
@@ -90,7 +107,7 @@
                 android:inputType="none"
                 android:padding="12dp"
                 android:textColor="@color/textColor"
-                android:textColorHint="@color/hintColor"
+                android:textColorHint="@color/purple1"
                 android:textCursorDrawable="@null" />
 
             <TextView
@@ -130,7 +147,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/selectunit"
+                android:background="@color/purple4"
                 android:padding="4dp">
 
                 <RelativeLayout
@@ -179,7 +196,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/selectunit"
+                android:background="@color/purple4"
                 android:padding="4dp">
 
                 <RelativeLayout
@@ -229,7 +246,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/convertUnit"
+            android:background="@color/purple3"
             android:padding="8dp">
 
             <RelativeLayout
@@ -259,6 +276,5 @@
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
-
 
 </RelativeLayout>

@@ -26,7 +26,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-
     CardView temperature;
     CardView mass;
     CardView length;
@@ -40,12 +39,10 @@ public class MainActivity extends AppCompatActivity {
     CardView energy;
     CardView storage;
     TextView timer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         temperature = findViewById(R.id.temperature);
         mass = findViewById(R.id.mass);
         length = findViewById(R.id.length);
@@ -58,14 +55,12 @@ public class MainActivity extends AppCompatActivity {
         frequency = findViewById(R.id.frequency);
         energy = findViewById(R.id.energy);
         storage = findViewById(R.id.storage);
-
         timer = findViewById(R.id.timer);
         Calendar c = Calendar.getInstance();
         System.out.println("Current dateTime => " + c.getTime());
         SimpleDateFormat df = new SimpleDateFormat("HH:mm");
         String formattedDate = df.format(c.getTime());
         timer.setText("Current Time : "+formattedDate);
-
         temperature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,6 +133,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, con_storage.class));
             }
         });
-
     }
 }

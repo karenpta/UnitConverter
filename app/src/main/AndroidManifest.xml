@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.unitconverter">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
@@ -8,6 +12,7 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitConverter">
+
         <activity
             android:name=".Conversions"
             android:exported="true">
@@ -58,4 +63,5 @@
             android:name=".MainActivity"
             android:exported="true" />
     </application>
+
 </manifest>
