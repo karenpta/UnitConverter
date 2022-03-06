@@ -6,6 +6,24 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import com.example.unitconverter.R;
+import com.example.unitconverter.con_area;
+import com.example.unitconverter.con_energy;
+import com.example.unitconverter.con_frequency;
+import com.example.unitconverter.con_fuel;
+import com.example.unitconverter.con_length;
+import com.example.unitconverter.con_mass;
+import com.example.unitconverter.con_pressure;
+import com.example.unitconverter.con_speed;
+import com.example.unitconverter.con_storage;
+import com.example.unitconverter.con_temperature;
+import com.example.unitconverter.con_time;
+import com.example.unitconverter.con_volume;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     CardView frequency;
     CardView energy;
     CardView storage;
+    TextView timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         frequency = findViewById(R.id.frequency);
         energy = findViewById(R.id.energy);
         storage = findViewById(R.id.storage);
+
+        timer = findViewById(R.id.timer);
+        Calendar c = Calendar.getInstance();
+        System.out.println("Current dateTime => " + c.getTime());
+        SimpleDateFormat df = new SimpleDateFormat("HH:mm");
+        String formattedDate = df.format(c.getTime());
+        timer.setText("Current Time : "+formattedDate);
 
         temperature.setOnClickListener(new View.OnClickListener() {
             @Override
