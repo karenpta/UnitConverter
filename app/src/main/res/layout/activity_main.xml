@@ -6,41 +6,26 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-        <TextView
-            android:id="@+id/tv_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"
-            android:text="Unit Converter"
-            android:textColor="@color/textColor"
-            android:textSize="32sp" />
-
-        <TextView
-            android:id="@+id/tv_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_text"
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="20dp"
-            android:text="By Karen Ptashek and Eldar Riskovich"
-            android:textColor="@color/textColor"
-            android:textSize="28sp" />
-
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back"
+            tools:layout_editor_absoluteX="126dp" />
 
         <TextView
             android:id="@+id/timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_text"
+            android:layout_below="@id/imageView"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="10dp"
             android:text="Time : "
             android:textColor="@color/textColor"
             android:textSize="20sp" />
@@ -48,7 +33,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_text2"
+            android:layout_below="@id/timer"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="20dp"

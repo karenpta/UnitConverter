@@ -133,5 +133,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, con_storage.class));
             }
         });
+
     }
 }
