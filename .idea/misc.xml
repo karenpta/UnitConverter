@@ -19,8 +19,13 @@
         <entry key="app/src/main/res/layout/activity_con_temperature.xml" value="0.1393110435663627" />
         <entry key="app/src/main/res/layout/activity_con_time.xml" value="0.1716485507246377" />
         <entry key="app/src/main/res/layout/activity_con_volume.xml" value="0.11367753623188406" />
-        <entry key="app/src/main/res/layout/activity_conversions.xml" value="0.11367753623188406" />
+        <entry key="app/src/main/res/layout/activity_conversions.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_full_image.xml" value="0.24912280701754386" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/image_item.xml" value="0.24912280701754386" />
+        <entry key="app/src/main/res/layout/screenshot.xml" value="0.1412280701754386" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -1,11 +1,5 @@
 package com.example.unitconverter;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,6 +7,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import java.util.Arrays;
 
@@ -333,6 +333,7 @@ public class con_area extends AppCompatActivity {
         double newton = delisle/100;
         return String.valueOf(newton);
     }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -342,4 +343,5 @@ public class con_area extends AppCompatActivity {
         }
         return  true;
     }
+
 }

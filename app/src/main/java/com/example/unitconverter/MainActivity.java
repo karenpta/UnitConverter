@@ -1,31 +1,25 @@
 package com.example.unitconverter;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.unitconverter.R;
-import com.example.unitconverter.con_area;
-import com.example.unitconverter.con_energy;
-import com.example.unitconverter.con_frequency;
-import com.example.unitconverter.con_fuel;
-import com.example.unitconverter.con_length;
-import com.example.unitconverter.con_mass;
-import com.example.unitconverter.con_pressure;
-import com.example.unitconverter.con_speed;
-import com.example.unitconverter.con_storage;
-import com.example.unitconverter.con_temperature;
-import com.example.unitconverter.con_time;
-import com.example.unitconverter.con_volume;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
+
+    GoogleSignInAccount account;
+    private ImageAdapter adapter;
+
     CardView temperature;
     CardView mass;
     CardView length;
@@ -39,10 +33,25 @@ public class MainActivity extends AppCompatActivity {
     CardView energy;
     CardView storage;
     TextView timer;
+    CardView past;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            account = (GoogleSignInAccount) extras.get("user");
+        }
+        TextView welcome = findViewById(R.id.welcomeTV);
+        welcome.setText("Welcome, " + account.getDisplayName());
+
+        ImageView userImage = findViewById(R.id.mainuserimage);
+        Glide.with(this).load(account.getPhotoUrl()).into(userImage);
+
+
         temperature = findViewById(R.id.temperature);
         mass = findViewById(R.id.mass);
         length = findViewById(R.id.length);
@@ -56,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         energy = findViewById(R.id.energy);
         storage = findViewById(R.id.storage);
         timer = findViewById(R.id.timer);
+        past = findViewById(R.id.past);
         Calendar c = Calendar.getInstance();
         System.out.println("Current dateTime => " + c.getTime());
         SimpleDateFormat df = new SimpleDateFormat("HH:mm");
@@ -133,5 +143,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, con_storage.class));
             }
         });
+        // Obtain the FirebaseAnalytics instance.
+        past.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ImageViewHolder.class));
+            }
+        });
     }
+
 }
